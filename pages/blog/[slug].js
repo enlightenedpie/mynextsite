@@ -23,17 +23,27 @@ export async function getStaticProps({ ...ctx }) {
 }
 
 export async function getStaticPaths() {
-  //get all .md files in the posts dir
-  const blogs = glob.sync('posts/**/*.md')
+  // //get all .md files in the posts dir
+  // const blogs = glob.sync('posts/**/*.md')
 
-  //remove path and extension to leave filename only
-  const blogSlugs = blogs.map(file =>
-    file
-      .split('/')[1]
-      .replace(/ /g, '-')
-      .slice(0, -3)
-      .trim()
-  )
+  // //remove path and extension to leave filename only
+  // const blogSlugs = blogs.map(file =>
+  //   file
+  //     .split('/')[1]
+  //     .replace(/ /g, '-')
+  //     .slice(0, -3)
+  //     .trim()
+  // )
+
+  const blogSlugs = ((context) => {
+    const keys = context.keys()
+    const data = keys.map((key, index) => {
+      let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
+
+      return slug
+    })
+    return data
+  })(require.context('../../posts', true, /\.md$/))
 
   // create paths with `slug` param
   const paths = blogSlugs.map(slug => `/blog/${slug}`)
