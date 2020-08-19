@@ -1,0 +1,70 @@
+{
+  "name": "mynextsite",
+  "version": "1.0.0",
+  "description": "My own personal website",
+  "author": "@enlightenedpie",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf .next",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "precommit": "echo 'committing changes to remote'",
+    "commit": "git add -A && git commit -a",
+    "postcommit": "git push"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "gray-matter": "^4.0.2",
+    "next": "9.5.2",
+    "raw-loader": "^4.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-markdown": "^4.3.1",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "autoprefixer": "^9.5.1",
+    "babel-plugin-root-import": "^6.5.0",
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-import-resolver-root-import": "^1.0.4",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "gatsby-plugin-scss-typescript": "^4.0.13",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.2",
+    "lodash": "^4.17.15",
+    "postcss-color-function": "^4.1.0",
+    "postcss-custom-properties": "^8.0.10",
+    "postcss-easy-import": "^3.0.0",
+    "prettier": "^2.0.4",
+    "pretty-quick": "^1.10.0"
+  },
+  "keywords": [
+    "nextjs"
+  ]
+}
