@@ -17,11 +17,11 @@ const Home = props => {
         </h1>
 
         <p className={styles.description}>
-          Come back later, I'm still
+          Come back later, I'm still 
           <code className={styles.code}>npm update</code> 'ing this bad boy
         </p>
       </main>
-      
+
       <footer className={styles.footer}>&copy; {year} Dave</footer>
     </div>
   )
