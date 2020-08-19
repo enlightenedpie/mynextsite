@@ -1,6 +1,6 @@
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import glob from 'glob';
+//import glob from 'glob';
 
 export default function BlogPost(props) {
   return (
