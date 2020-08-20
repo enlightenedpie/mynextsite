@@ -6,7 +6,7 @@ const Home = props => {
   return (
     <Layout title={props.title}>
       <h1 className={styles.title}>
-        Welcome to <a href="https://nextjs.org">{props.mysite}</a>
+        Welcome to <a href="/babbish">{props.mysite}</a>
       </h1>
 
       <p className={styles.description}>

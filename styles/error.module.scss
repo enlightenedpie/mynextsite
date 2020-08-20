@@ -1,0 +1,17 @@
+.foOhFo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  h1 {
+    order: 2;
+  }
+
+  h2 {
+    order: 1;
+    line-height: .75;
+  }
+}
