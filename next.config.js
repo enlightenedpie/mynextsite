@@ -1,6 +1,8 @@
 const withManifest = require('next-manifest');
+const withSass = require('@zeit/next-sass');
+const compose = require('next-compose');
 
-module.exports = withManifest({
+const manifestConfig = {
   manifest: {
     output: './public/', // The folder where the manifest will be generated.
     name: 'PWA',
@@ -16,12 +18,27 @@ module.exports = withManifest({
         "type": "image/png"
       }
     ]
-  },
-  webpack: function(config) {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader',
-    })
-    return config
-  },
-});
+  }
+};
+
+const sassConfig = {
+  cssModules: true,
+  cssLoaderOptions: {
+    importLoaders: 2,
+    localIdentName: "_[local]__[hash:base64:12]",
+  }
+};
+
+module.exports = compose([
+  [withManifest, manifestConfig],
+  [withSass, sassConfig],
+  {
+    webpack: function(config) {
+      config.module.rules.push({
+        test: /\.md$/,
+        use: 'raw-loader',
+      })
+      return config
+    }
+  }
+]);

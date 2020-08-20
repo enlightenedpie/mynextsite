@@ -1,7 +1,6 @@
-import Head from 'next/head'
-
 import Layout from '../components/Layout'
-import styles from '../styles/Home.module.css'
+import Instagram from '../components/Instagram'
+import styles from '../styles/index.module.scss'
 
 const Home = props => {
   return (
@@ -12,6 +11,11 @@ const Home = props => {
 
       <p className={styles.description}>
         Come back later, I'm still <code className={styles.code}>npm update</code>'ing this bad boy
+      </p>
+
+      <p className={styles.instagram}>
+        <h2>Instagram</h2>
+        <Instagram/>
       </p>
     </Layout>
   )
