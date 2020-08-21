@@ -14,7 +14,7 @@ const Instagram = ({className}) => {
       <Head>
         <link rel="stylesheet" href="https://snapwidget.com/stylesheets/snapwidget-lightbox.css" />
       </Head>
-      <iframe src="https://snapwidget.com/embed/864211" class="snapwidget-widget" allowTransparency="true" frameBorder="0" scrolling="no" style={{
+      <iframe src="https://snapwidget.com/embed/864211" className="snapwidget-widget" allowtransparency="true" frameBorder="0" scrolling="no" style={{
             border: "none",
             overflow: "hidden",
             width: "100%"

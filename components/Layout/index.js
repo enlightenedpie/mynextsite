@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../../styles/index.module.scss'
+import Footer from '../Footer'
 
-const year = (new Date).getFullYear()
+import styles from './layout.module.scss'
 
 const Layout = ({title,children}) => {
 
@@ -14,7 +14,7 @@ const Layout = ({title,children}) => {
       <main className={styles.main}>
         {children}
       </main>
-      <footer className={styles.footer}>&copy; {year} Dave</footer>
+      <Footer/>
     </div>
   )
 }

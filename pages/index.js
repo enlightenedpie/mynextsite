@@ -5,18 +5,20 @@ import styles from '../styles/index.module.scss'
 const Home = props => {
   return (
     <Layout title={props.title}>
-      <h1 className={styles.title}>
-        Welcome to <a href="/babbish">{props.mysite}</a>
-      </h1>
+      <section>
+        <h1 className={styles.title}>
+          Welcome to <a href="/babbish">{props.mysite}</a>
+        </h1>
 
-      <p className={styles.description}>
-        Come back later, I'm still <code className={styles.code}>npm update</code>'ing this bad boy
-      </p>
+        <p className={styles.description}>
+          Come back later, I'm still <code className={styles.code}>npm update</code>'ing this bad boy
+        </p>
+      </section>
 
-      <p className={styles.instagram}>
+      <section className={styles.instagram}>
         <h2>Instagram</h2>
         <Instagram/>
-      </p>
+      </section>
     </Layout>
   )
 }

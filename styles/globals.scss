@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
   background:
   radial-gradient(ellipse at 100%, rgba(#e66465,.2), transparent),
   radial-gradient(ellipse at bottom, rgba(#454ecc,.1), transparent),
@@ -12,6 +15,19 @@ body {
   linear-gradient(180deg, rgba(255, 255, 255, .4) 10%, hsla(179, 91%, 45%, .7) 80%),
   linear-gradient(315deg, rgba(255, 255, 255, 0.9) 10%, hsla(119, 96%, 49%, .5) 70%);
   background-attachment: fixed;
+
+  section {
+    width: 100%;
+    min-height: 100vh;
+
+    &:first-of-type {
+      min-height: 30vh;
+    }
+  
+    iframe {
+      display: block;
+    }
+  }
 }
 
 h1, h2 {
