@@ -11,7 +11,7 @@ const Home = props => {
         </h1>
 
         <p className={styles.description}>
-          Come back later, I'm still <code className={styles.code}>npm update</code>'ing this bad boy
+          Check back later, I'm still <code className={styles.code}>npm update</code>'ing this bad boy
         </p>
       </section>
 

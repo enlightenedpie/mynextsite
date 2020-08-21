@@ -25,7 +25,7 @@ const sassConfig = {
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 2,
-    localIdentName: "build508[path][hash:base64:12]", //[name][local]
+    localIdentName: "508b-[path][hash:base64:16]", //[name][local]
   }
 };
 
