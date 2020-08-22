@@ -25,6 +25,8 @@ const Home = props => {
 
 export default Home
 
+export const config = { amp: "hybrid" }
+
 export async function getStaticProps() {
   const configData = await import(`../data/config.json`)
   return {

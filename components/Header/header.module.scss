@@ -1,0 +1,24 @@
+@import 'styles/utils.scss';
+
+.biggun {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  height: $headerh;
+  padding: 1rem;
+
+  svg {
+    display: block;
+    height: 100%;
+    width: auto;
+    fill: rgba(#666,.5);
+    transition: all 500ms ease-in-out;
+  }
+
+  html[class*="dark"] & {
+    svg {
+      fill: rgba(#fff,.6);
+    }
+  }
+}
